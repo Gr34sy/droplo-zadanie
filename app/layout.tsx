@@ -1,21 +1,13 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { ContextWrapper } from '@/components/MenuListContext';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Navigation Menu",
-  description: "Droplo Recruitment Task",
+  title: 'Navigation Menu',
+  description: 'Droplo Recruitment Task',
 };
 
 export default function RootLayout({
@@ -25,10 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter.className} bg-slate-100`}>
+        <div className="w-[min(98%,1650px)] mx-auto">
+          <ContextWrapper>{children}</ContextWrapper>
+        </div>
       </body>
     </html>
   );
