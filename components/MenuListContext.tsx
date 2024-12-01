@@ -16,13 +16,16 @@ const MenuListContext = createContext<MenuContextType>({
 });
 
 export function ContextWrapper({ children }: { children: React.ReactNode }) {
-  const [menuList, setMenuList] = useState<menu[]>([]);
+  const [menuList, setMenuList] = useState<menu[]>([
+    // { label: 'Test 1', url: 'http://localhost' },
+    // { label: 'Test 2', url: 'http://localhost' },
+  ]);
 
   function addMenu(menu: menu) {
     setMenuList((prevList) => [...prevList, menu]);
   }
 
-  function deleteMenu(id: number){
+  function deleteMenu(id: number) {
     setMenuList((prevList) => prevList.filter((item, i) => id !== i));
   }
 

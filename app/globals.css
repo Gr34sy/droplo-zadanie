@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --white-1: #ffffff;
+    --white-2: #f9fafb;
+
+    --gray-1: #d0d5dd;
+    --gray-2: #eaecf0;
+    --gray-3: #f9fafb;
+
+    --darkgrey-1: #475467;
+    --darkgrey-2: #344054;
+    --black: #101828;
+
+    --violet: #7f56d9;
+
+    /* --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb; 
+   --border-primary: #d0d5dd;
+    --border-secondary: #eaecf0; 
+   --text-primary: #101828;
+    --text-secondary: #344054;
+    --text-tertiary: #475467; */
+  }
+}
+
+body {
+  color: #101828;
+}
+
 /* basic css reset */
 html,
 body,

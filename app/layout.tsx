@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-100`}>
-        <div className="w-[min(98%,1650px)] mx-auto">
+      <body className={`${inter.className}`}>
+        <div className="w-[min(98%,1650px)] mx-auto py-16">
           <ContextWrapper>{children}</ContextWrapper>
         </div>
       </body>
